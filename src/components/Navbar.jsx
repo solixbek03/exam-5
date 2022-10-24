@@ -34,7 +34,7 @@ const Navbar = () => {
         {
           users.slice(0, 6).map((user) => (
             <li key={user.id} className='w-50'>
-              <Link to={'/profile'} className='d-flex align-items-center gap-2 text-decoration-none text-secondary'>
+              <Link to={'/channel'} className='d-flex align-items-center gap-2 text-decoration-none text-secondary'>
                 <img src={user.url} alt={user.title} width={26} height={26}/>
 
                 <h3 className="card-title fs-6">{user.title}</h3>

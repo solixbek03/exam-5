@@ -5,6 +5,7 @@ import ImgThree from '../assets/CombinedShape.png'
 import ImgFour from '../assets/Userpic.png'
 import ImgFive from '../assets/phone-18.png'
 import ImgSix from '../assets/ui-11.png'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -14,7 +15,9 @@ const Header = () => {
           <div className="d-flex justify-content-between align-items-center gap-4 ">
             <img src={ImgTwo} alt="menu"/>
 
-            <img src={ImgOne} alt='logo'/>
+            <Link to={'/'}>
+              <img src={ImgOne} alt='logo'/>
+            </Link>
 
             <form className="d-flex align-items-center justify-content-between ms-5 col-10">
               <input className='form-control ' type="text" placeholder='Search' />

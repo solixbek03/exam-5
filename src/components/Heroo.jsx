@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import FirstAvatar from '../assets/Oval.png'
 import FirstAvatarT from '../assets/OvalT.png'
 
 const Hero = () => {
 
+  const { id } = useParams();
   const [users, setUsers] = useState([])
   const [loaderT, setLoaderT] = useState(true)
   useEffect(() => {
@@ -16,8 +17,9 @@ const Hero = () => {
         setLoaderT(false)
       })
       
-  }, [])
+  }, [id])
 
+  console.log(id);
   // console.log(users);
 
   if (loaderT) {
@@ -35,11 +37,11 @@ const Hero = () => {
         <h4>Dollie Blair</h4>
       </div>
 
-      <ul className=" list-unstyled mt-4 d-flex flex-nowrap gap-2">
+      <ul className=" list-unstyled mt-4 d-flex flex-nowrap gap-3">
         {
           users.slice(0, 6).map((user, i) => (
             <li key={user.id} className='card-item w-25  mb-3'>
-              <Link to={'/video'} className='text-decoration-none'>
+              <Link to={'/video'} className='text-decoration-none text-dark'>
                 <img className='card-img' src={user.url} alt={user.title} width={250} height={150}/>
 
                 <h3 className="card-title fs-6">{user.title}</h3>
@@ -59,11 +61,11 @@ const Hero = () => {
 
       <h4>Recommended</h4>
 
-      <ul className=" list-unstyled mt-4 d-flex flex-nowrap gap-2">
+      <ul className=" list-unstyled mt-4 d-flex flex-nowrap gap-3">
         {
           users.slice(6, 9).map((user, i) => (
             <li key={user.id} className='card-item w-50  mb-3'>
-              <Link to={'/video'} className='text-decoration-none'>
+              <Link to={'/video'} className='text-decoration-none text-dark'>
                 <img className='card-img' src={user.url} alt={user.title} width={540} height={250}/>
 
                 <h3 className="card-title fs-6">{user.title}</h3>
@@ -88,11 +90,11 @@ const Hero = () => {
         <p>Recommended channel for you</p>
       </div>
 
-      <ul className=" list-unstyled mt-4 d-flex flex-nowrap gap-2">
+      <ul className=" list-unstyled mt-4 d-flex flex-nowrap gap-3">
         {
           users.slice(9, 15).map((user, i) => (
             <li key={user.id} className='card-item w-25  mb-3'>
-              <Link to={'/video'} className='text-decoration-none'>
+              <Link to={'/video'} className='text-decoration-none text-dark'>
                 <img className='card-img' src={user.url} alt={user.title} width={250} height={150}/>
 
                 <h3 className="card-title fs-6">{user.title}</h3>
