@@ -1,15 +1,15 @@
 import React from 'react';
-import HeroHome from './HeroHome';
+import HeroChannel from './HeroChannel';
 import Navbar from './Navbar';
 
-const CenterHome = () => {
+const CenterChannel = () => {
   return (
     <div className='d-flex container-fluid'>
       <Navbar />
 
-      <HeroHome />
+      <HeroChannel />
     </div>
   );
 }
 
-export default CenterHome;
+export default CenterChannel;

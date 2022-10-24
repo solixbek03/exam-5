@@ -4,7 +4,7 @@ const NavbarTop = () => {
   return (
     <div className=''>
       <ul className='navbar-nav justify-content-end flex-grow-1 ps-2 mb-3 gap-2 text-dark'>
-        <li>Home</li>
+        <li className='fw-bolder'>Home</li>
         <li>Trending</li>
         <li className='mb-4'>Subscriptions</li>
         <li>Library</li>

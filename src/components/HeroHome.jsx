@@ -4,8 +4,6 @@ import FirstAvatar from '../assets/Oval.png'
 import FirstAvatarT from '../assets/OvalT.png'
 
 const Hero = () => {
-
-  const { id } = useParams();
   const [users, setUsers] = useState([])
   const [loaderT, setLoaderT] = useState(true)
   useEffect(() => {
@@ -17,10 +15,12 @@ const Hero = () => {
         setLoaderT(false)
       })
       
-  }, [id])
+  }, [])
 
-  console.log(id);
-  // console.log(users);
+
+
+
+
 
   if (loaderT) {
     return (
@@ -41,7 +41,7 @@ const Hero = () => {
         {
           users.slice(0, 6).map((user, i) => (
             <li key={user.id} className='card-item w-25  mb-3'>
-              <Link to={'/video'} className='text-decoration-none text-dark'>
+              <Link to={`/video/${user.id}`} className='text-decoration-none text-dark'>
                 <img className='card-img' src={user.url} alt={user.title} width={250} height={150}/>
 
                 <h3 className="card-title fs-6">{user.title}</h3>
@@ -65,7 +65,7 @@ const Hero = () => {
         {
           users.slice(6, 9).map((user, i) => (
             <li key={user.id} className='card-item w-50  mb-3'>
-              <Link to={'/video'} className='text-decoration-none text-dark'>
+              <Link to={`/video/${user.id}`} className='text-decoration-none text-dark'>
                 <img className='card-img' src={user.url} alt={user.title} width={540} height={250}/>
 
                 <h3 className="card-title fs-6">{user.title}</h3>
@@ -94,7 +94,7 @@ const Hero = () => {
         {
           users.slice(9, 15).map((user, i) => (
             <li key={user.id} className='card-item w-25  mb-3'>
-              <Link to={'/video'} className='text-decoration-none text-dark'>
+              <Link to={`/video/${user.id}`} className='text-decoration-none text-dark'>
                 <img className='card-img' src={user.url} alt={user.title} width={250} height={150}/>
 
                 <h3 className="card-title fs-6">{user.title}</h3>

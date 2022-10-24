@@ -26,18 +26,19 @@ const Navbar = () => {
   }
 
 
+
   return (
     <div className='w-25'>
       <NavbarTop />
 
-      <ul className='navbar-nav flex-grow-1 ps-2 mb-3 gap-2 text-dark'>
+      <ul className='navbar-nav flex-grow-1  mb-3 gap-2 text-dark'>
         {
           users.slice(0, 6).map((user) => (
             <li key={user.id} className='w-50'>
-              <Link to={'/channel'} className='d-flex align-items-center gap-2 text-decoration-none text-secondary'>
+              <Link to={`/channel`} className='d-flex align-items-center gap-2 text-decoration-none text-secondary'>
                 <img src={user.url} alt={user.title} width={26} height={26}/>
 
-                <h3 className="card-title fs-6">{user.title}</h3>
+                <h3 className="card-title fs-6 ">{user.title}</h3>
               </Link>
             </li>
           ))
