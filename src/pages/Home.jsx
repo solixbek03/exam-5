@@ -1,10 +1,10 @@
 import React from 'react';
-import CenterMain from '../components/CenterMain';
+import CenterHome from '../components/CenterHome';
 
 const Home = () => {
   return (
     <>
-      <CenterMain />
+      <CenterHome />
     </>
   );
 }

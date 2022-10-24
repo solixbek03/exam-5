@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from './Heroo';
 import Navbar from './Navbar';
 
-const CenterMain = () => {
+const CenterHome = () => {
   return (
     <div className='d-flex container-fluid'>
       <Navbar />
@@ -12,4 +12,4 @@ const CenterMain = () => {
   );
 }
 
-export default CenterMain;
+export default CenterHome;
