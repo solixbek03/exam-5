@@ -18,10 +18,6 @@ const Hero = () => {
   }, [])
 
 
-
-
-
-
   if (loaderT) {
     return (
       <div className="spinner-border text-danger mt-5 ms-5" role="status">
